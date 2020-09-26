@@ -28,25 +28,23 @@ r6     /r7     /r8     /r9     /r10     /r11     /r12      - Registradores do pr
 r1(001)/r2(010)/r3(011)/r4(100)/r5(101) /r6(110) /r7(111)  - Registradores reais do nosso processador
 
 Instruções
-0  - NOP                    --
-1  - ADD 1, R12             -- Armazena 1 no R12 
-2  - ADD 5, R8              -- Carrega R3 (o registrador 3) com o valor 5
-3  - ADD 8, R9              -- Carrega R4 com 8
-4  - ADD R8, R10            -- Soma R3 com R4 e guarda em R5
-5  - ADD R9, R10            -- Soma R3 com R4 e guarda em R5
-6  - SUB R12, R10           -- Subtrai 1 de R5
-7  - JR  20                 -- Salta para o endereço 20
+0  - ADD 1, R12             -- Armazena 1 no R12 
+1  - ADD 5, R8              -- Carrega R3 (o registrador 3) com o valor 5
+2  - ADD 8, R9              -- Carrega R4 com 8
+3  - MOV R8, R10            -- Soma R3 com R4 e guarda em R5
+4  - ADD R9, R10            -- Soma R3 com R4 e guarda em R5
+5  - SUB R12, R10           -- Subtrai 1 de R5
+6  - JMP 20                 -- Salta para o endereço 20
 20 - MOV R10, R8            -- No endereço 20, copia R5 para R3
-21 - JR 4                   -- Salta para a terceira instrução desta lista (R5 <= R3+R4)
+21 - JMP 4                   -- Salta para a terceira instrução desta lista (R5 <= R3+R4)
 
 Opcodes 
-0  - 00000000000000000		-- 0x00000
-1  - 00100000001000111     	-- 0x4047
-2  - 00100000101000011		-- 0x4143
-3  - 00100001000000100		-- 0x4204
-4  - 00110000000011101		-- 0x601D
-5  - 00110000000100101		-- 0x6025
-6  - 01000000000111101      	-- 0x803D
-7  - 11110010100000000		-- 0x1E500
-20 - 01110000000101011		-- 0xE02B
+0  - 00100000001000111     	-- 0x04047
+1  - 00100000101000011		-- 0x04143
+2  - 00100001000000100		-- 0x04204
+3  - 01110000000011101		-- 0x0E01D
+4  - 00110000000100101		-- 0x06025
+5  - 01000000000111101      -- 0x0803D
+6  - 11110010100000000		-- 0x1E500
+20 - 01110000000101011		-- 0x0E02B
 21 - 11110000100000000		-- 0x1E100
