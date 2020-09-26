@@ -1,10 +1,11 @@
-Para instalar o GHDL/GTKWAVE no WINDOWS: https://www.youtube.com/watch?v=H2GyAIYwZbw
+Para instalar o GHDL/GTKWAVE no WINDOWS: https://www.youtube.com/watch?v=H2GyAIYwZbw (acessado em 22/09/20)
 
-Para executar os arquivos no VHDL*:
+-------------------------------------------------------------------------------------------------------------
+Para compilar os arquivos VHDL*:
 
-*se os comandos de ghdl/gtkwave n�o rodar, vai editar o PATH no sistema
+*se os comandos de ghdl/gtkwave n�o rodar, vai editar o PATH no sistema
 
-1- Se direcione para a pasta que est� o projeto pelo CMD (usando cd)
+1- Se direcione para a pasta que est� o projeto pelo CMD e execute as seguintes instruções
 2- ghdl -s arquivo.vhd
 3- ghdl -s arquivo_tb.vhd
 4- ghdl -a arquivo.vhd
@@ -12,3 +13,18 @@ Para executar os arquivos no VHDL*:
 6- ghdl -e arquivo_tb
 7- ghdl -r arquivo_tb --stop-time=3000ns --wave=arquivo.ghw
 9- gtkwave arquivo.ghw
+
+Se tiver alguma forma de onda já setada para o componente
+
+10- gtkwave arquivo.ghw --save=arquivo.gtkw
+
+Indicado para quando for fazer para componentes individualmente (arquivo.tb e arquivo_tb.vhd)
+
+-------------------------------------------------------------------------------------------------------------
+
+Para facilitar a compilação e teste do processador (quando tiver vários componentes), usar o easyCompiler.js
+1 - Instalar o nodejs
+2 - Na pasta que tiver os vários arquivos .vhd, abrir o terminal e executar: node easyCompiler.js*
+*garantir que o arquivo easyCompiler.js esteja na mesma pasta que os arquivos .vhd
+
+
