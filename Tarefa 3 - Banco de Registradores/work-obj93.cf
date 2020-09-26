@@ -1,0 +1,31 @@
+v 4
+file . "bancoreg_ula_tb.vhd" "1764052d6eb71c76bdbc9fcd7f6f38e6b89ed7e6" "20200819161443.871":
+  entity bancoreg_ula_tb at 1( 0) + 0 on 41;
+  architecture a_bancoreg_ula_tb of bancoreg_ula_tb at 8( 116) + 0 on 42;
+file . "bancoreg_tb.vhd" "f39dd25931c3a942114b9eb7cb8fb4835113ea6e" "20200819153515.594":
+  entity bancoreg_tb at 1( 0) + 0 on 33;
+  architecture a_bancoreg_tb of bancoreg_tb at 8( 112) + 0 on 34;
+file . "registrador_tb.vhd" "a5d9f7c10eff04b6a5928fa148968e9a884ccc83" "20200819151259.110":
+  entity registrador_tb at 1( 0) + 0 on 21;
+  architecture a_registrador_tb of registrador_tb at 8( 108) + 0 on 22;
+file . "ula_tb.vhd" "c90e4abf123391516e0011cbf959db6ac1852224" "20200819151227.542":
+  entity ula_tb at 1( 0) + 0 on 17;
+  architecture a_ula_tb of ula_tb at 8( 100) + 0 on 18;
+file . "mux_tb.vhd" "99aa70a138630aff73c0db44d1ed7f3d3894397d" "20200819151201.201":
+  entity mux_tb at 1( 0) + 0 on 13;
+  architecture a_mux_tb of mux_tb at 8( 107) + 0 on 14;
+file . "mux.vhd" "a52d46210b01b0b4862e46b1fc06ae6cecf69339" "20200819151152.730":
+  entity mux at 1( 0) + 0 on 11;
+  architecture a_mux of mux at 14( 329) + 0 on 12;
+file . "ula.vhd" "5fbcb2246e7f616fb6213203755c5f0b5ac17ede" "20200819151224.225":
+  entity ula at 1( 0) + 0 on 15;
+  architecture a_ula of ula at 14( 314) + 0 on 16;
+file . "registrador.vhd" "25bbe7f79d54eac6e76ed44c992fda16caca3d48" "20200819151255.830":
+  entity registrador at 1( 0) + 0 on 19;
+  architecture a_registrador of registrador at 15( 319) + 0 on 20;
+file . "bancoreg.vhd" "aa929e34ca59c398165cde5130a1cbfce1f0b35c" "20200819153514.699":
+  entity bancoreg at 1( 0) + 0 on 31;
+  architecture a_bancoreg of bancoreg at 19( 534) + 0 on 32;
+file . "bancoreg_ula.vhd" "7af44bf0c8d8aa6a04a793bb23116a109d4ed14a" "20200819161441.066":
+  entity bancoreg_ula at 1( 0) + 0 on 39;
+  architecture a_bancoreg_ula of bancoreg_ula at 22( 579) + 0 on 40;

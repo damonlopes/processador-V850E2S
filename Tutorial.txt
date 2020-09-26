@@ -1,0 +1,14 @@
+Para instalar o GHDL/GTKWAVE no WINDOWS: https://www.youtube.com/watch?v=H2GyAIYwZbw
+
+Para executar os arquivos no VHDL*:
+
+*se os comandos de ghdl/gtkwave não rodar, vai editar o PATH no sistema
+
+1- Se direcione para a pasta que está o projeto pelo CMD (usando cd)
+2- ghdl -s arquivo.vhd
+3- ghdl -s arquivo_tb.vhd
+4- ghdl -a arquivo.vhd
+5- ghdl -a arquivo_tb.vhd
+6- ghdl -e arquivo_tb
+7- ghdl -r arquivo_tb --stop-time=3000ns --wave=arquivo.ghw
+9- gtkwave arquivo.ghw

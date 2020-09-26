@@ -1,0 +1,49 @@
+﻿Operação
+0000 - NOP
+0001 - ???
+0010 - ADD  imm7, reg2 (GR[reg2] + imm7-> GR[reg2])
+0011 - ADD  reg1, reg2 (GR[reg2] + GR[reg1] -> GR[reg2])
+0100 - SUB  reg1, reg2 (GR[reg2] - GR[reg1] -> GR[reg2])
+0101 - SUBR reg1, reg2 (GR[reg1] - GR[reg2] -> GR[reg1])
+0110 - MOV  imm7, reg2 (imm7 -> GR[reg2])
+0111 - MOV  reg1, reg2 (GR[reg1] -> GR[reg2])
+1000 - ???
+1010 - BL   imm7, reg1, reg2 (imm7 -> PC se GR[reg1] < GR[reg2])
+1011 - BEQ  imm7, reg1, reg2 (imm7 -> PC se GR[reg1] = GR[reg2])
+1111 - JR (imm7 -> PC)
+
+Formato OPCODE
+CCCCIIIIIIIrrrRRR
+
+C - Operação
+I - Constantes
+r - Registrador 1
+R - Registrador 2
+
+Registradores
+r6     /r7     /r8     /r9     /r10     /r11     /r12      - Registradores do processador (V850E2S)
+r1(001)/r2(010)/r3(011)/r4(100)/r5(101) /r6(110) /r7(111)  - Registradores reais do nosso processador
+
+Instruções
+0  - NOP                    --
+1  - ADD 1, R12             -- Armazena 1 no R12 
+2  - ADD 5, R8              -- Carrega R3 (o registrador 3) com o valor 5
+3  - ADD 8, R9              -- Carrega R4 com 8
+4  - ADD R8, R10            -- Soma R3 com R4 e guarda em R5
+5  - ADD R9, R10            -- Soma R3 com R4 e guarda em R5
+6  - SUB R12, R10           -- Subtrai 1 de R5
+7  - JR  20                 -- Salta para o endereço 20
+20 - MOV R10, R8            -- No endereço 20, copia R5 para R3
+21 - JR 4                   -- Salta para a terceira instrução desta lista (R5 <= R3+R4)
+
+Opcodes 
+0  - 00000000000000000		-- 0x00000
+1  - 00100000001000111     	-- 0x4047
+2  - 00100000101000011		-- 0x4143
+3  - 00100001000000100		-- 0x4204
+4  - 00110000000011101		-- 0x601D
+5  - 00110000000100101		-- 0x6025
+6  - 01000000000111101      	-- 0x803D
+7  - 11110010100000000		-- 0x1E500
+20 - 01110000000101011		-- 0xE02B
+21 - 11110000100000000		-- 0x1E100

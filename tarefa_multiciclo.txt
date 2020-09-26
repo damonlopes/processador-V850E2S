@@ -1,0 +1,121 @@
+UTFPR - DAELN - CT 
+
+Arquitetura de Computadores - CSW30 
+
+Prof. Juliano M. Vieira 
+
+  
+
+  
+
+INSTRUÇÕES: 
+
+- Responda tudo abaixo 
+
+- Se um sinal não está mostrado em certo estado (em uma "bola"), então ele está inativo (está em zero) 
+
+- Nem todas as instruções estão implementadas (p.ex., não tem _addi_ neste circuito) 
+
+- IMPORTANTE: a máquina de estados do livro-texto, em algumas ediçõespossui UM BUG GRAVE na figura da máquina de estados, no estado 4, e outro bug nem tanto (quer dizer, esse eu às vezes esqueço). 
+
+  
+
+  
+
+QUESTIONÁRIO MULTICICLO 
+
+======================= 
+
+  
+
+1. RESPONDA: PARA QUE SERVEM? 
+
+a) IorD 
+
+Controla qual endereço vai ser usado na memória (PC ou ALUOut) 
+
+b) MemToReg 
+
+Determina de onde vai puxar os dados para escrever no banco de registradores (se vai ser do Memory Data Register ou da ALUOut)  
+
+c) PCWriteCond 
+
+Ele é ativado quando a instrução é do tipo BEQ (Branch) 
+
+d) RegDst 
+
+Escolhe em qual registrador a informação vai ser gravada, de acordo com o tipo da instrução (se for tipo R, pega o endereço do registrador nos bits 15-11, se for do tipo I, pega o endereço do registrador nos bits 20-16) 
+
+e) RegWrite 
+
+Habilita a escrita de dados nos registradores. Só em duas situações não vai acontecer isso: quando ele for escrever na memória (SW) ou quando ele faz a operação BRANCH ou JUMP. 
+
+f) A e B 
+
+Registradores que armazenam os dados do banco de registradores. 
+
+g) ALUOut 
+
+Registrador que armazena o resultado da ULA 
+
+h) Memory Data Register 
+
+Registrador que armazena o dado da memória  
+
+  
+
+2. VERIIQUE OS TRÊS SINAIS DO ESTADO 4. SUA MÁQUINA DE ESTADOS TEM BUG? SE SIM, QUAL? 
+
+Ela não possui bug. 
+
+  
+
+3. EM QUAL ESTADO OU ESTADOS: 
+
+a) O PC é incrementado? 
+
+Estados 4, 5 e 7. Jumps (estado 9) e Branches (estado 8) são calculados. 
+
+b) O destino do branch é calculado? 
+
+Estado 1. 
+
+c) Um resultado é escrito em um processador? 
+
+ Estado 4 e 7. 
+
+ 
+
+4. ESTE PROCESSADOR É: 
+
+a) von Neumann? ou Harvard? 
+
+von Neumann, pois só existe uma memória, para dados e instruções. 
+
+c) E o processador ciclo único visto anteriormente? 
+
+Harvard, pois não é possível fazer a operação em um ciclo sem haver a separação de memória de dados e de instruções.
+
+  
+
+5. O QUE FAZ O INSTRUCTION REGISTER? 
+
+É um registrador que faz a separação dos endereços de entrada, separa entre: Operação, Registrador1, Registrador2 e Instruções (que podem ser outro registrador). 
+
+E o que ocorre se ele for retirado do circuito e for feita uma ligação direta em seu lugar? 
+
+Um ciclo é perdido, pois as instruções vindas do PC já iriam direto para as MUXs e controladores. 
+
+  
+
+6. DESCREVA A FUNÇÃO DE CADA UMA DAS ENTRADAS NO MUX DA ALU 
+
+Mux superior: Diferenciar a primeira entrada da ULA entre PC e registrador A 
+
+Mux inferior: Essa tem a função de selecionar um de quatro valores recebidos (dependendo do estado do seletor) e passar para a ALU. Estando em '00', o valor selecionado é o que advém do regB, sendo '01', estará apenas passando o PC para a próxima instrução, caso seja '10', estará passando um constante vindo da memory data, para a operação addi. Contudo sendo '11', será o endereço destino do branches (há o shift left 2, multiplicação por 4, pois cada instrução tem 4 endereços de memória). 
+
+  
+
+* NOTE QUE eu não perguntei sobre todos os detalhes, mas você deve compreender TODO o circuito! 
+
+ 

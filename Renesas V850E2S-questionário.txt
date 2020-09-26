@@ -1,0 +1,35 @@
+﻿RENESAS V850E2S
+
+Estrutura e nome dos registradores:
+
+Registradores do programa (todos são 32 bits):
+- r0 = Zero Register
+- r1 = Assembler Reserved Register
+- r3 = Stack Pointer
+- r4 = Global Pointer
+- r5 = Text Pointer
+- r2, r6 até r29 = Registrador de variáveis
+- r30 = Element Pointer
+- r31 = Link Pointer
+- PC = Program Counter
+
+Instruções originais do processador a implementar para operações de:
+
+- Carga de constante: MOV
+
+- Cópia de valor entre registradores: MOV, MOVEA e MOVHI.
+
+- Soma de dois valores: ADD e ADDI
+
+- Subtração de dois valores: SUB e SUBR
+
+- Desvio incondicional: JARL, JMP e JR.
+
+É desejável (mas não fundamental) pesquisar e determinar o funcionamento de:
+
+- Desvio condicional: Seria referente as instruções de Bcond, em que se as condições da instrução forem
+satisfeitas, será mandado pro PC o valor do PC mais os nove bits do sinal de deslocamento (Disp9).
+
+- Instruções de acesso à memória: Seria referente as instruções de Load/Store:
+ 	Load: faz a transferência de dados da memória para o registrador
+	Store: faz a transferência de dados do registrador para a memória.
