@@ -1,0 +1,13 @@
+v 4
+file . "registrador_tb.vhd" "2fdca6f9ba86e902e71d922b07ac33e20da52eec" "20200926012008.349":
+  entity registrador_tb at 1( 0) + 0 on 17;
+  architecture a_registrador_tb of registrador_tb at 8( 108) + 0 on 18;
+file . "bancoreg_tb.vhd" "9b34ed595e9a48fd470c528985bbd9436e744e0a" "20200926012008.911":
+  entity bancoreg_tb at 1( 0) + 0 on 21;
+  architecture a_bancoreg_tb of bancoreg_tb at 8( 112) + 0 on 22;
+file . "bancoreg.vhd" "a5f597491839d1e46e08ffebe9a89b1d6b8bf40e" "20200926012008.841":
+  entity bancoreg at 1( 0) + 0 on 19;
+  architecture a_bancoreg of bancoreg at 19( 903) + 0 on 20;
+file . "registrador.vhd" "5994215dfa0a981bd67854190b8db9c918ff1d0e" "20200926012008.265":
+  entity registrador at 1( 0) + 0 on 15;
+  architecture a_registrador of registrador at 15( 500) + 0 on 16;

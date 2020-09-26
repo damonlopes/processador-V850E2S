@@ -1,91 +1,91 @@
 v 4
-file . "ula_tb.vhd" "7a51cd09825aca293b12331e70ebcc9aa08006b6" "20200925183622.254":
-  entity ula_tb at 1( 0) + 0 on 137;
-  architecture a_ula_tb of ula_tb at 8( 100) + 0 on 138;
-file . "uc_tb.vhd" "2c1346ef82f62f2764050791eb15ac085c2449ec" "20200925183621.450":
-  entity uc_tb at 1( 0) + 0 on 133;
-  architecture a_uc_tb of uc_tb at 8( 106) + 0 on 134;
-file . "signextend_tb.vhd" "649aebda36e465d29f9052ede9d94070f344085d" "20200925183620.729":
-  entity signextend_tb at 1( 0) + 0 on 129;
-  architecture a_signextend_tb of signextend_tb at 8( 114) + 0 on 130;
-file . "rom_tb.vhd" "08d2451990c12cbf7708dc0b29840b08bd5a2a6d" "20200925183619.956":
-  entity rom_tb at 1( 0) + 0 on 125;
-  architecture a_rom_tb of rom_tb at 8( 100) + 0 on 126;
-file . "reg_rom_tb.vhd" "4fca5accebda408c80acd3d9842817e7b95543cc" "20200925183619.296":
-  entity reg_rom_tb at 1( 0) + 0 on 121;
-  architecture a_reg_rom_tb of reg_rom_tb at 8( 104) + 0 on 122;
-file . "registrador_tb.vhd" "92d5b83a74a8d8452bfb17ee3248c12e9e0b913a" "20200925183618.468":
-  entity registrador_tb at 1( 0) + 0 on 117;
-  architecture a_registrador_tb of registrador_tb at 8( 108) + 0 on 118;
-file . "processador_tb.vhd" "6a224199c813b9ecfdf0d0b3a24f64267d4ad1ca" "20200925183622.975":
-  entity processador_tb at 1( 0) + 0 on 141;
-  architecture a_processador_tb of processador_tb at 8( 115) + 0 on 142;
-file . "pc_tb.vhd" "6e8c32d823354574c0e326e81c98e78c0c44be4d" "20200925183616.897":
-  entity pc_tb at 1( 0) + 0 on 109;
-  architecture a_pc_tb of pc_tb at 8( 121) + 0 on 110;
-file . "mux_ula_tb.vhd" "1fba267ec86a8dd074dde097a699083ec1b224f4" "20200925183616.201":
-  entity mux_ula_tb at 1( 0) + 0 on 105;
-  architecture a_mux_ula_tb of mux_ula_tb at 8( 111) + 0 on 106;
-file . "mux_pc_tb.vhd" "d6512e351c5c2c12c99593f38b5093522fb284a4" "20200925183615.501":
-  entity mux_pc_tb at 1( 0) + 0 on 101;
-  architecture a_mux_pc_tb of mux_pc_tb at 8( 110) + 0 on 102;
-file . "mux_branch_tb.vhd" "7a676a4b5f37ee20ed3c356167b4e42962360f68" "20200925183614.661":
-  entity mux_branch_tb at 1( 0) + 0 on 97;
-  architecture a_mux_branch_tb of mux_branch_tb at 8( 114) + 0 on 98;
-file . "maq_estados_tb.vhd" "e281edf71eadbdf00f0487757b1ce5a2e8fcf467" "20200925183613.946":
-  entity maq_estados_tb at 1( 0) + 0 on 93;
-  architecture a_maq_estados_tb of maq_estados_tb at 8( 115) + 0 on 94;
-file . "bancoreg_tb.vhd" "b6195e6fc29e0cf45f8e23c8ef7001db5fd189a4" "20200925183613.167":
-  entity bancoreg_tb at 1( 0) + 0 on 89;
-  architecture a_bancoreg_tb of bancoreg_tb at 8( 112) + 0 on 90;
-file . "adder_x_pc_tb.vhd" "0fecb535f0db8cfaaf750bf842a4e8c3453a2871" "20200925183612.292":
-  entity adder_x_pc_tb at 1( 0) + 0 on 85;
-  architecture a_adder_x_pc_tb of adder_x_pc_tb at 8( 114) + 0 on 86;
-file . "adder_one_pc_tb.vhd" "f9bd087df126fc09ebda2492e4bcbc446bf06e91" "20200925183611.670":
-  entity adder_one_pc_tb at 1( 0) + 0 on 81;
-  architecture a_adder_one_pc_tb of adder_one_pc_tb at 8( 116) + 0 on 82;
-file . "adder_one_pc.vhd" "aa2e76aefac1b35310e7da198a4c7097eab5371f" "20200925183611.560":
-  entity adder_one_pc at 1( 0) + 0 on 79;
-  architecture a_adder_one_pc of adder_one_pc at 13( 301) + 0 on 80;
-file . "adder_x_pc.vhd" "70422cbe8fe7417f98d4cca0bf23cd9102f5ce80" "20200925183612.211":
-  entity adder_x_pc at 1( 0) + 0 on 83;
-  architecture a_adder_x_pc of adder_x_pc at 14( 387) + 0 on 84;
-file . "bancoreg.vhd" "c18667846c6ce112a8958797409db0101000b255" "20200925183613.086":
-  entity bancoreg at 1( 0) + 0 on 87;
-  architecture a_bancoreg of bancoreg at 20( 959) + 0 on 88;
-file . "maq_estados.vhd" "dc3546cbeab379469eaaa7b39991008e54a27347" "20200925183613.873":
-  entity maq_estados at 1( 0) + 0 on 91;
-  architecture a_maq_estados of maq_estados at 16( 566) + 0 on 92;
-file . "mux_branch.vhd" "37745f48884d9b4c906be967f8010eaa3c269a8f" "20200925183614.566":
-  entity mux_branch at 1( 0) + 0 on 95;
-  architecture a_mux_branch of mux_branch at 16( 545) + 0 on 96;
-file . "mux_pc.vhd" "40bc55cf969acfba8b114ce6e6cd5c9fb9c39d9e" "20200925183615.411":
-  entity mux_pc at 1( 0) + 0 on 99;
-  architecture a_mux_pc of mux_pc at 15( 429) + 0 on 100;
-file . "mux_ula.vhd" "2171b5c61c1f92fc1370d06bc7106ec0dd8cc74f" "20200925183616.122":
-  entity mux_ula at 1( 0) + 0 on 103;
-  architecture a_mux_ula of mux_ula at 15( 462) + 0 on 104;
-file . "pc.vhd" "27de1f5daf76bb523368c8a4c859c87cb0dbeda2" "20200925183616.827":
-  entity pc at 1( 0) + 0 on 107;
-  architecture a_pc of pc at 16( 458) + 0 on 108;
-file . "processador.vhd" "cd1016793aeaa2c455a0ea1fd341b113d5a281fb" "20200925183622.895":
-  entity processador at 1( 0) + 0 on 139;
-  architecture a_processador of processador at 19( 578) + 0 on 140;
-file . "registrador.vhd" "49801e84c17f4914bc49eaa5ee682fad9966b230" "20200925183618.262":
-  entity registrador at 1( 0) + 0 on 115;
-  architecture a_registrador of registrador at 16( 503) + 0 on 116;
-file . "reg_rom.vhd" "a108fe9850900e490dc08b352a7c953bb4d4e1a1" "20200925183619.184":
-  entity reg_rom at 1( 0) + 0 on 119;
-  architecture a_reg_rom of reg_rom at 16( 545) + 0 on 120;
-file . "rom.vhd" "30c8f02afe3181ca796a5c821123a3dd7807331d" "20200925183619.884":
-  entity rom at 1( 0) + 0 on 123;
-  architecture a_rom of rom at 13( 338) + 0 on 124;
-file . "signextend.vhd" "9431f8f48108ecc51894e20818179d50fdb903e6" "20200925183620.581":
-  entity signextend at 1( 0) + 0 on 127;
-  architecture a_signextend of signextend at 12( 329) + 0 on 128;
-file . "uc.vhd" "6f3aec1131be7a1e0a7459c417d67961757217d8" "20200925183621.335":
-  entity uc at 1( 0) + 0 on 131;
-  architecture a_uc of uc at 19( 935) + 0 on 132;
-file . "ula.vhd" "786dfd6bc2f30a640e743b4b75606dd6f7ebf229" "20200925183622.159":
-  entity ula at 1( 0) + 0 on 135;
-  architecture a_ula of ula at 16( 609) + 0 on 136;
+file . "ula_tb.vhd" "7a51cd09825aca293b12331e70ebcc9aa08006b6" "20200926012330.670":
+  entity ula_tb at 1( 0) + 0 on 69;
+  architecture a_ula_tb of ula_tb at 8( 100) + 0 on 70;
+file . "uc_tb.vhd" "2c1346ef82f62f2764050791eb15ac085c2449ec" "20200926012330.091":
+  entity uc_tb at 1( 0) + 0 on 65;
+  architecture a_uc_tb of uc_tb at 8( 106) + 0 on 66;
+file . "signextend_tb.vhd" "649aebda36e465d29f9052ede9d94070f344085d" "20200926012329.537":
+  entity signextend_tb at 1( 0) + 0 on 61;
+  architecture a_signextend_tb of signextend_tb at 8( 114) + 0 on 62;
+file . "rom_tb.vhd" "08d2451990c12cbf7708dc0b29840b08bd5a2a6d" "20200926012329.009":
+  entity rom_tb at 1( 0) + 0 on 57;
+  architecture a_rom_tb of rom_tb at 8( 100) + 0 on 58;
+file . "reg_rom_tb.vhd" "4fca5accebda408c80acd3d9842817e7b95543cc" "20200926012328.466":
+  entity reg_rom_tb at 1( 0) + 0 on 53;
+  architecture a_reg_rom_tb of reg_rom_tb at 8( 104) + 0 on 54;
+file . "registrador_tb.vhd" "92d5b83a74a8d8452bfb17ee3248c12e9e0b913a" "20200926012327.926":
+  entity registrador_tb at 1( 0) + 0 on 49;
+  architecture a_registrador_tb of registrador_tb at 8( 108) + 0 on 50;
+file . "processador_tb.vhd" "6a224199c813b9ecfdf0d0b3a24f64267d4ad1ca" "20200926012331.773":
+  entity processador_tb at 1( 0) + 0 on 77;
+  architecture a_processador_tb of processador_tb at 8( 115) + 0 on 78;
+file . "pc_tb.vhd" "6e8c32d823354574c0e326e81c98e78c0c44be4d" "20200926012326.964":
+  entity pc_tb at 1( 0) + 0 on 41;
+  architecture a_pc_tb of pc_tb at 8( 121) + 0 on 42;
+file . "mux_ula_tb.vhd" "1fba267ec86a8dd074dde097a699083ec1b224f4" "20200926012326.386":
+  entity mux_ula_tb at 1( 0) + 0 on 37;
+  architecture a_mux_ula_tb of mux_ula_tb at 8( 111) + 0 on 38;
+file . "mux_pc_tb.vhd" "d6512e351c5c2c12c99593f38b5093522fb284a4" "20200926012325.850":
+  entity mux_pc_tb at 1( 0) + 0 on 33;
+  architecture a_mux_pc_tb of mux_pc_tb at 8( 110) + 0 on 34;
+file . "mux_branch_tb.vhd" "7a676a4b5f37ee20ed3c356167b4e42962360f68" "20200926012325.319":
+  entity mux_branch_tb at 1( 0) + 0 on 29;
+  architecture a_mux_branch_tb of mux_branch_tb at 8( 114) + 0 on 30;
+file . "maq_estados_tb.vhd" "e281edf71eadbdf00f0487757b1ce5a2e8fcf467" "20200926012324.789":
+  entity maq_estados_tb at 1( 0) + 0 on 25;
+  architecture a_maq_estados_tb of maq_estados_tb at 8( 115) + 0 on 26;
+file . "bancoreg_tb.vhd" "b6195e6fc29e0cf45f8e23c8ef7001db5fd189a4" "20200926012331.209":
+  entity bancoreg_tb at 1( 0) + 0 on 73;
+  architecture a_bancoreg_tb of bancoreg_tb at 8( 112) + 0 on 74;
+file . "adder_x_pc_tb.vhd" "0fecb535f0db8cfaaf750bf842a4e8c3453a2871" "20200926012323.883":
+  entity adder_x_pc_tb at 1( 0) + 0 on 17;
+  architecture a_adder_x_pc_tb of adder_x_pc_tb at 8( 114) + 0 on 18;
+file . "adder_one_pc_tb.vhd" "f9bd087df126fc09ebda2492e4bcbc446bf06e91" "20200926012323.380":
+  entity adder_one_pc_tb at 1( 0) + 0 on 13;
+  architecture a_adder_one_pc_tb of adder_one_pc_tb at 8( 116) + 0 on 14;
+file . "adder_one_pc.vhd" "aa2e76aefac1b35310e7da198a4c7097eab5371f" "20200926012323.306":
+  entity adder_one_pc at 1( 0) + 0 on 11;
+  architecture a_adder_one_pc of adder_one_pc at 13( 301) + 0 on 12;
+file . "adder_x_pc.vhd" "70422cbe8fe7417f98d4cca0bf23cd9102f5ce80" "20200926012323.822":
+  entity adder_x_pc at 1( 0) + 0 on 15;
+  architecture a_adder_x_pc of adder_x_pc at 14( 387) + 0 on 16;
+file . "bancoreg.vhd" "c18667846c6ce112a8958797409db0101000b255" "20200926012331.145":
+  entity bancoreg at 1( 0) + 0 on 71;
+  architecture a_bancoreg of bancoreg at 20( 959) + 0 on 72;
+file . "maq_estados.vhd" "dc3546cbeab379469eaaa7b39991008e54a27347" "20200926012324.726":
+  entity maq_estados at 1( 0) + 0 on 23;
+  architecture a_maq_estados of maq_estados at 16( 566) + 0 on 24;
+file . "mux_branch.vhd" "37745f48884d9b4c906be967f8010eaa3c269a8f" "20200926012325.253":
+  entity mux_branch at 1( 0) + 0 on 27;
+  architecture a_mux_branch of mux_branch at 16( 545) + 0 on 28;
+file . "mux_pc.vhd" "40bc55cf969acfba8b114ce6e6cd5c9fb9c39d9e" "20200926012325.772":
+  entity mux_pc at 1( 0) + 0 on 31;
+  architecture a_mux_pc of mux_pc at 15( 429) + 0 on 32;
+file . "mux_ula.vhd" "2171b5c61c1f92fc1370d06bc7106ec0dd8cc74f" "20200926012326.306":
+  entity mux_ula at 1( 0) + 0 on 35;
+  architecture a_mux_ula of mux_ula at 15( 462) + 0 on 36;
+file . "pc.vhd" "27de1f5daf76bb523368c8a4c859c87cb0dbeda2" "20200926012326.898":
+  entity pc at 1( 0) + 0 on 39;
+  architecture a_pc of pc at 16( 458) + 0 on 40;
+file . "processador.vhd" "cd1016793aeaa2c455a0ea1fd341b113d5a281fb" "20200926012331.708":
+  entity processador at 1( 0) + 0 on 75;
+  architecture a_processador of processador at 19( 578) + 0 on 76;
+file . "registrador.vhd" "49801e84c17f4914bc49eaa5ee682fad9966b230" "20200926012327.861":
+  entity registrador at 1( 0) + 0 on 47;
+  architecture a_registrador of registrador at 16( 503) + 0 on 48;
+file . "reg_rom.vhd" "a108fe9850900e490dc08b352a7c953bb4d4e1a1" "20200926012328.399":
+  entity reg_rom at 1( 0) + 0 on 51;
+  architecture a_reg_rom of reg_rom at 16( 545) + 0 on 52;
+file . "rom.vhd" "30c8f02afe3181ca796a5c821123a3dd7807331d" "20200926012328.934":
+  entity rom at 1( 0) + 0 on 55;
+  architecture a_rom of rom at 13( 338) + 0 on 56;
+file . "signextend.vhd" "9431f8f48108ecc51894e20818179d50fdb903e6" "20200926012329.474":
+  entity signextend at 1( 0) + 0 on 59;
+  architecture a_signextend of signextend at 12( 329) + 0 on 60;
+file . "uc.vhd" "6f3aec1131be7a1e0a7459c417d67961757217d8" "20200926012330.033":
+  entity uc at 1( 0) + 0 on 63;
+  architecture a_uc of uc at 19( 935) + 0 on 64;
+file . "ula.vhd" "786dfd6bc2f30a640e743b4b75606dd6f7ebf229" "20200926012330.604":
+  entity ula at 1( 0) + 0 on 67;
+  architecture a_ula of ula at 16( 609) + 0 on 68;

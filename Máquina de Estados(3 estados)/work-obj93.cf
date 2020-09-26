@@ -1,0 +1,7 @@
+v 4
+file . "maq_estados_tb.vhd" "e281edf71eadbdf00f0487757b1ce5a2e8fcf467" "20200926012028.319":
+  entity maq_estados_tb at 1( 0) + 0 on 13;
+  architecture a_maq_estados_tb of maq_estados_tb at 8( 115) + 0 on 14;
+file . "maq_estados.vhd" "dc3546cbeab379469eaaa7b39991008e54a27347" "20200926012028.244":
+  entity maq_estados at 1( 0) + 0 on 11;
+  architecture a_maq_estados of maq_estados at 16( 566) + 0 on 12;
