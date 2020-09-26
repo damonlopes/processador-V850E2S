@@ -10,7 +10,10 @@
 1000 - ???
 1010 - BL   imm7, reg1, reg2 (imm7 -> PC se GR[reg1] < GR[reg2])
 1011 - BEQ  imm7, reg1, reg2 (imm7 -> PC se GR[reg1] = GR[reg2])
-1111 - JMP  imm7, reg1 (imm7 + GR[reg1] -> PC)
+1111 - JMP  imm7, reg1 (imm7 + GR[reg1] -> PC)*
+
+*a instrução de jump (JMP) não foi implementada do mesmo jeito que está descrito no datasheet do processador,
+ contudo a execução dele funciona.
 
 Formato OPCODE
 CCCCIIIIIIIrrrRRR
