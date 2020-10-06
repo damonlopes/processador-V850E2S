@@ -1,0 +1,59 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Mon Oct 05 21:06:24 2020
+[*]
+[dumpfile] "C:\Users\Pet\Desktop\Arq. de Computadores\processador-V850E2S\Tarefa 7 - RAM\ula.ghw"
+[dumpfile_mtime] "Mon Oct 05 21:01:34 2020"
+[dumpfile_size] 2369
+[savefile] "C:\Users\Pet\Desktop\Arq. de Computadores\processador-V850E2S\Tarefa 7 - RAM\ula.gtkw"
+[timestart] 0
+[size] 1366 715
+[pos] -35 -35
+*-27.000000 178500000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.ula_tb.
+[treeopen] top.ula_tb.uut.
+[sst_width] 197
+[signals_width] 333
+[sst_expanded] 1
+[sst_vpaned_height] 193
+@24
+#{top.ula_tb.in_a[15:0]} top.ula_tb.in_a[15] top.ula_tb.in_a[14] top.ula_tb.in_a[13] top.ula_tb.in_a[12] top.ula_tb.in_a[11] top.ula_tb.in_a[10] top.ula_tb.in_a[9] top.ula_tb.in_a[8] top.ula_tb.in_a[7] top.ula_tb.in_a[6] top.ula_tb.in_a[5] top.ula_tb.in_a[4] top.ula_tb.in_a[3] top.ula_tb.in_a[2] top.ula_tb.in_a[1] top.ula_tb.in_a[0]
+#{top.ula_tb.in_b[15:0]} top.ula_tb.in_b[15] top.ula_tb.in_b[14] top.ula_tb.in_b[13] top.ula_tb.in_b[12] top.ula_tb.in_b[11] top.ula_tb.in_b[10] top.ula_tb.in_b[9] top.ula_tb.in_b[8] top.ula_tb.in_b[7] top.ula_tb.in_b[6] top.ula_tb.in_b[5] top.ula_tb.in_b[4] top.ula_tb.in_b[3] top.ula_tb.in_b[2] top.ula_tb.in_b[1] top.ula_tb.in_b[0]
+@c00028
+#{top.ula_tb.uut.soma_17[16:0]} top.ula_tb.uut.soma_17[16] top.ula_tb.uut.soma_17[15] top.ula_tb.uut.soma_17[14] top.ula_tb.uut.soma_17[13] top.ula_tb.uut.soma_17[12] top.ula_tb.uut.soma_17[11] top.ula_tb.uut.soma_17[10] top.ula_tb.uut.soma_17[9] top.ula_tb.uut.soma_17[8] top.ula_tb.uut.soma_17[7] top.ula_tb.uut.soma_17[6] top.ula_tb.uut.soma_17[5] top.ula_tb.uut.soma_17[4] top.ula_tb.uut.soma_17[3] top.ula_tb.uut.soma_17[2] top.ula_tb.uut.soma_17[1] top.ula_tb.uut.soma_17[0]
+@28
+top.ula_tb.uut.soma_17[16]
+top.ula_tb.uut.soma_17[15]
+top.ula_tb.uut.soma_17[14]
+top.ula_tb.uut.soma_17[13]
+top.ula_tb.uut.soma_17[12]
+top.ula_tb.uut.soma_17[11]
+top.ula_tb.uut.soma_17[10]
+top.ula_tb.uut.soma_17[9]
+top.ula_tb.uut.soma_17[8]
+top.ula_tb.uut.soma_17[7]
+top.ula_tb.uut.soma_17[6]
+top.ula_tb.uut.soma_17[5]
+top.ula_tb.uut.soma_17[4]
+top.ula_tb.uut.soma_17[3]
+top.ula_tb.uut.soma_17[2]
+top.ula_tb.uut.soma_17[1]
+top.ula_tb.uut.soma_17[0]
+@1401208
+-group_end
+@24
+#{top.ula_tb.uut.soma_17[16:0]} top.ula_tb.uut.soma_17[16] top.ula_tb.uut.soma_17[15] top.ula_tb.uut.soma_17[14] top.ula_tb.uut.soma_17[13] top.ula_tb.uut.soma_17[12] top.ula_tb.uut.soma_17[11] top.ula_tb.uut.soma_17[10] top.ula_tb.uut.soma_17[9] top.ula_tb.uut.soma_17[8] top.ula_tb.uut.soma_17[7] top.ula_tb.uut.soma_17[6] top.ula_tb.uut.soma_17[5] top.ula_tb.uut.soma_17[4] top.ula_tb.uut.soma_17[3] top.ula_tb.uut.soma_17[2] top.ula_tb.uut.soma_17[1] top.ula_tb.uut.soma_17[0]
+@28
+#{top.ula_tb.uut.subtracao_17[16:0]} top.ula_tb.uut.subtracao_17[16] top.ula_tb.uut.subtracao_17[15] top.ula_tb.uut.subtracao_17[14] top.ula_tb.uut.subtracao_17[13] top.ula_tb.uut.subtracao_17[12] top.ula_tb.uut.subtracao_17[11] top.ula_tb.uut.subtracao_17[10] top.ula_tb.uut.subtracao_17[9] top.ula_tb.uut.subtracao_17[8] top.ula_tb.uut.subtracao_17[7] top.ula_tb.uut.subtracao_17[6] top.ula_tb.uut.subtracao_17[5] top.ula_tb.uut.subtracao_17[4] top.ula_tb.uut.subtracao_17[3] top.ula_tb.uut.subtracao_17[2] top.ula_tb.uut.subtracao_17[1] top.ula_tb.uut.subtracao_17[0]
+@24
+#{top.ula_tb.uut.subtracao_17[16:0]} top.ula_tb.uut.subtracao_17[16] top.ula_tb.uut.subtracao_17[15] top.ula_tb.uut.subtracao_17[14] top.ula_tb.uut.subtracao_17[13] top.ula_tb.uut.subtracao_17[12] top.ula_tb.uut.subtracao_17[11] top.ula_tb.uut.subtracao_17[10] top.ula_tb.uut.subtracao_17[9] top.ula_tb.uut.subtracao_17[8] top.ula_tb.uut.subtracao_17[7] top.ula_tb.uut.subtracao_17[6] top.ula_tb.uut.subtracao_17[5] top.ula_tb.uut.subtracao_17[4] top.ula_tb.uut.subtracao_17[3] top.ula_tb.uut.subtracao_17[2] top.ula_tb.uut.subtracao_17[1] top.ula_tb.uut.subtracao_17[0]
+@28
+#{top.ula_tb.op[1:0]} top.ula_tb.op[1] top.ula_tb.op[0]
+@24
+#{top.ula_tb.out_data[15:0]} top.ula_tb.out_data[15] top.ula_tb.out_data[14] top.ula_tb.out_data[13] top.ula_tb.out_data[12] top.ula_tb.out_data[11] top.ula_tb.out_data[10] top.ula_tb.out_data[9] top.ula_tb.out_data[8] top.ula_tb.out_data[7] top.ula_tb.out_data[6] top.ula_tb.out_data[5] top.ula_tb.out_data[4] top.ula_tb.out_data[3] top.ula_tb.out_data[2] top.ula_tb.out_data[1] top.ula_tb.out_data[0]
+@28
+top.ula_tb.uut.cmp_carry
+top.ula_tb.uut.cmp_zero
+[pattern_trace] 1
+[pattern_trace] 0

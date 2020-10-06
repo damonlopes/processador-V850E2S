@@ -1,0 +1,39 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Mon Oct 05 20:43:07 2020
+[*]
+[dumpfile] "C:\Users\Pet\Desktop\Arq. de Computadores\processador-V850E2S\Tarefa 7 - RAM\reg_flag.ghw"
+[dumpfile_mtime] "Mon Oct 05 20:34:58 2020"
+[dumpfile_size] 1074
+[savefile] "C:\Users\Pet\Desktop\Arq. de Computadores\processador-V850E2S\Tarefa 7 - RAM\reg_flag.gtkw"
+[timestart] 0
+[size] 1366 715
+[pos] -9 -9
+*-29.000000 144000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.reg_flag_tb.
+[sst_width] 197
+[signals_width] 220
+[sst_expanded] 1
+[sst_vpaned_height] 193
+@28
+top.reg_flag_tb.uut.clk
+top.reg_flag_tb.uut.rst
+#{top.reg_flag_tb.opcode[3:0]} top.reg_flag_tb.opcode[3] top.reg_flag_tb.opcode[2] top.reg_flag_tb.opcode[1] top.reg_flag_tb.opcode[0]
+@24
+#{top.reg_flag_tb.sel_branch[2:0]} top.reg_flag_tb.sel_branch[2] top.reg_flag_tb.sel_branch[1] top.reg_flag_tb.sel_branch[0]
+@29
+top.reg_flag_tb.uut.flagwr_en
+@28
+top.reg_flag_tb.uut.flagzero_in
+top.reg_flag_tb.uut.flagcarry_in
+top.reg_flag_tb.uut.flagzero_mem
+top.reg_flag_tb.uut.flagcarry_mem
+top.reg_flag_tb.uut.flag_out
+@200
+-BE = 0/Zero = 1 
+-BNE = 1/Zero = 0
+-BL = 2/Carry = 1
+-BH = 4/Carry = 0
+[pattern_trace] 1
+[pattern_trace] 0
