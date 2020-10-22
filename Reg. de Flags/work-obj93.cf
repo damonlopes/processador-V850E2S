@@ -1,0 +1,7 @@
+v 4
+file . "reg_flag_tb.vhd" "119884a40e9f572d8be3d86e224fcac5d1b06834" "20201022200249.577":
+  entity reg_flag_tb at 1( 0) + 0 on 13;
+  architecture a_reg_flag_tb of reg_flag_tb at 8( 112) + 0 on 14;
+file . "reg_flag.vhd" "eb9f9b38a0fc803d39ceaf3de7bc2c977b457604" "20201022200249.444":
+  entity reg_flag at 1( 0) + 0 on 11;
+  architecture a_reg_flag of reg_flag at 19( 702) + 0 on 12;

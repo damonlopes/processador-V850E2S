@@ -1,0 +1,168 @@
+﻿Operações
+0000 - NOP
+0001 - ???
+0010 - ADD imm7, reg2 (GR[reg2] + sign-extend(imm7) -> GR[reg2])
+0011 - ADD reg1, reg2 (GR[reg2] + GR[reg1] -> GR[reg2])
+0100 - SUB reg1, reg2 (GR[reg2] - GR[reg1] -> GR[reg2])
+0101 - SUBR reg1, reg2 (GR[reg1] - GR[reg2] -> GR[reg1])
+0110 - MUL imm7, reg2, reg3 (GR[reg2] * sign-extend(imm7) -> GR[reg3])
+0111 - MUL reg1, reg2, reg3 (GR[reg2] * GR[reg1] -> GR[reg3])
+1000 - CMP imm7, reg2 (GR[reg2] - sign-extend(imm7) -> result)
+1001 - CMP reg1, reg2 (GR[reg2] - GR[reg1] -> result)
+1010 - MOV imm7, reg2 (sign-extend(imm7) -> GR[reg2])
+1011 - MOV reg1, reg2 (GR[reg1] -> GR[reg2])
+1100 - LD.W disp7[reg1], reg2 (1- GR[reg1] + sign-extend(disp7) -> addr/2- loadmem(addr,Word) -> GR[reg2])
+1101 - ST.W reg2, disp7[reg1] (1- GR[reg1] + sign-extend(disp7) -> addr/2- storemem(addr,GR[reg2],Word))
+1110 - Bcond disp7 (disp7 + PC -> PC se cumprir as condições)
+    tipos de Bcond
+        BE (Branch if equal): bbb = 000
+            verifica se flag zero = 1
+        BNE (Branch if not equal): bbb = 001
+            verifica se flag zero = 0
+        BL (Branch if lower): bbb = 010
+            verifica a flag carry = 1
+        BNL (Branch if not lower): bbb = 011
+            verifica se flag carry = 0
+        BN (Branch if negative): bbb = 100
+            verifica se flag negativo = 1
+        BP (Branch if positive): bbb = 101
+            verifica se flag negativo = 0
+1111 - JMP disp7[reg1] (disp7 + GR[reg1] -> PC)*
+
+*a instrução de jump (JMP) não foi implementada do mesmo jeito que está descrito no datasheet do processador,
+ contudo a execução dele funciona.
+
+Formatos OPCODE:
+1. NOP (00000000000000000)
+
+2. ADD imm7, reg2 (0010iiiiiii000RRR)
+    i - imm7
+    R - reg2
+3. ADD reg1, reg2 (00110000000rrrRRR)
+    r - reg1
+    R - reg2
+4. SUB imm7, reg2 (0100iiiiiii000RRR)
+    i - imm7
+    R - reg2
+5. SUBR reg1, reg2 (01010000000rrrRRR)
+    r - reg1
+    R - reg2
+6. MUL imm7, reg2, reg3 (0110iiiiiiirrrRRR)
+    i - imm7
+    r - reg2
+    R - reg3
+7. MUL reg1, reg2, reg3 (01110000gggrrrRRR)
+    g - reg1
+    r - reg2
+    R - reg3
+8. CMP imm7, reg2 (1000iiiiiii000RRR)
+    i - imm7
+    R - reg2
+9. CMP reg1, reg2 (10010000000rrrRRR)
+    r - reg1
+    R - reg2
+10. MOV imm7, reg2 (1010iiiiiii000RRR)
+    i - imm7
+    R - reg2
+11. MOV reg1, reg2 (10110000000rrrRRR)
+    r - reg1
+    R - reg2
+12. LD.W disp7[reg1], reg2 (1100dddddddrrrRRR)
+    d - disp7
+    r - reg1
+    R - reg2
+13. ST.W reg2, disp7[reg1] (1101dddddddrrrRRR)
+    d - disp7
+    r - reg1
+    R - reg2
+14. Bcond disp7 (1110ddddddd000bbb)
+    d - disp7
+    b - tipo de Branch
+        000: BE (Branch if Equal) - zero = 1
+        001: BNE (Branch if Not Equal) - zero = 0
+        010: BL (Branch if Lower) - carry = 1
+        011: BNL (Branch if Not Lower) - carry = 0
+        100: BN (Branch if Negative) - negativo = 1
+        101: BP (Branch if Positive) - negativo = 0
+15. JMP disp7[reg1] (1111ddddddd000000)
+    d - disp7
+
+Registradores
+r6     /r7     /r8     /r9     /r10    /r11    /r12     - Registradores do processador (V850E2S)
+r1(001)/r2(010)/r3(011)/r4(100)/r5(101)/r6(110)/r7(111) - Registradores reais do nosso processador
+
+Instruções
+    (o programa foi feito para só limpar os múltiplos de 2, 3 e 5 entre os números 2 e 32.
+    Se for pra remover outros múltiplos (ex: 7, 11, 13...) ou aumentar o alcance,
+    precisa fazer alguns ajustes)
+
+    1º Loop -- Preenche os endereços da RAM
+0  - MOV 1, R6 		            -- Armazena 1 em R1
+1  - ADD 1, R6  	            -- Adiciona 1 em R1
+2  - ST.W R6, 0[R6]	            -- Armazena no endereço relativo a 0 + R1 na RAM o valor de R1
+3  - CMP 32, R6		            -- Compara 32 com R1
+4  - BNE -3			            -- Verifica se ambos são iguais, se sim prossegue, se não retorna para a linha 1
+    2º Loop -- Remove todos os múltiplos de 2
+5  - MOV 1, R7		            -- Armazena 1 em R2
+6  - ADD 1, R7		            -- Adiciona 1 em R2
+7  - MUL 2, R7, R8	            -- Multiplica R2 com 2 e armazena em R3
+8  - ST.W R0, 0[R8]	            -- Limpa o endereço relativo a 0 + R3 na RAM (Armazena zero)
+9  - CMP 32, R8		            -- Compara 32 com R3
+10 - BN -4			            -- Verifica se já passou do limite, se sim prossegue, se não retorna para a linha 6
+    3º Loop -- Remove todos os múltiplos de 3
+11 - MOV 1, R7		            -- Armazena 1 em R2
+12 - ADD 1, R7		            -- Adiciona 1 em R2
+13 - MUL 3, R7, R8	            -- Multiplica R2 com 3 e armazena em R3
+14 - ST.W R0, 0[R8]	            -- Limpa o endereço relativo a 0 + R3 na RAM (Armazena zero)
+15 - CMP 32, R8		            -- Compara 32 com R3
+16 - BN -4			            -- Verifica se já passou do limite, se sim prossegue, se não retorna para a linha 12
+    4º Loop -- Remove todos os múltiplos de 5
+17 - MOV 1, R7		            -- Armazena 1 em R2 
+18 - ADD 1, R7		            -- Adiciona 1 em R2 
+19 - MUL 5, R7, R8	            -- Multiplica R2 com 5 e armazena em R3 
+20 - ST.W R0, 0[R8]	            -- Limpa o endereço relativo a 0 + R3 na RAM (Armazena zero) 
+21 - CMP 32, R8		            -- Compara 32 com R3 
+22 - BN -4			            -- Verifica se já passou do limite, se sim prossegue, se não retorna para a linha 18
+    5º Loop -- Imprime todos os números
+23 - MOV 0, R6 		            -- Armazena 0 em R1
+24 - MOV 1, R7   	            -- Armazena 1 em R2
+25 - ADD 1, R7		            -- Adiciona 1 em R2
+26 - LD.W 0[R7], R6	            -- Carrega em R1 o valor do endereço relativo a 0 + R2 na RAM
+27 - CMP 32, R7		            -- Compara 32 com R2
+28 - BNE -3			            -- Verifica se ambos são iguais, se sim prossegue, se não retorna para a linha 25
+ 
+Opcodes 
+    1º Loop
+0  - 10100000001000001          --  0x14041
+1  - 00100000001000001          --  0x04041
+2  - 11010000000001001          --  0x1A009
+3  - 10000100000000001          --  0x10801
+4  - 11101111101000001          --  0x1DF41
+    2º Loop
+5  - 10100000001000010          --  0x14042
+6  - 00100000001000010          --  0x04042
+7  - 01100000010010011          --  0x0C093
+8  - 11010000000011000          --  0x1A018
+9  - 10000100000000011          --  0x10803
+10 - 11101111100000100          --  0x1DF04
+    3º Loop
+11 - 10100000001000010          --  0x14042
+12 - 00100000001000010          --  0x04042
+13 - 01100000011010011          --  0x0C0D3
+14 - 11010000000011000          --  0x1A018
+15 - 10000100000000011          --  0x10803
+16 - 11101111100000100          --  0x1DF04
+    4º Loop
+17 - 10100000001000010          --  0x14042
+18 - 00100000001000010          --  0x04042
+19 - 01100000101010011          --  0x0C153
+20 - 11010000000011000          --  0x1A018
+21 - 10000100000000011          --  0x10803
+22 - 11101111100000100          --  0x1DF04
+    5º Loop
+23 - 10100000000000001          --  0x14001
+24 - 10100000001000010          --  0x14042
+25 - 00100000001000010          --  0x04042
+26 - 11000000000010001          --  0x18011
+27 - 10000100000000010          --  0x10802
+28 - 11101111101000001          --  0x1DF41
